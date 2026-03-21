@@ -251,7 +251,7 @@ export default function Page() {
                 ))}
                 <button
                   onClick={() => setLanguage(language === "vi" ? "en" : "vi")}
-                  className="px-4 py-2 rounded-lg transition-all duration-300 min-w-[60px] text-center text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium border border-gray-200 cursor-pointer"
+                  className="px-4 py-2 rounded-lg transition-all duration-300 min-w-[60px]  text-center text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium border border-gray-200 cursor-pointer"
                 >
                   {language === "vi" ? "EN" : "VI"}
                 </button>
