@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { Analytics } from "@vercel/analytics/next";
 const translations = {
   vi: {
     sections: {
@@ -169,7 +169,7 @@ const sections = [
   { id: "projects", labelKey: "projects" },
 ];
 
-export default function ProfilePage() {
+export default function Page() {
   const [activeSection, setActiveSection] = useState("hero");
   const [language, setLanguage] = useState<"vi" | "en">("vi");
   const [showScrollTop, setShowScrollTop] = useState(false);
