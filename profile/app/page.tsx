@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Image from "next/image";
 const translations = {
   vi: {
     sections: {
@@ -276,7 +277,13 @@ export default function Page() {
               transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
               className="w-48 h-48 mx-auto mb-8 rounded-full bg-linear-to-br from-blue-400 to-purple-500 flex items-center justify-center text-6xl font-bold text-white shadow-2xl"
             >
-              M
+              <Image
+                src="/avata.jpg"
+                alt="Avatar"
+                width={192}
+                height={192}
+                className="rounded-full object-cover w-full h-full"
+              />
             </motion.div>
             <h1 className="text-6xl leading-normal font-bold mb-4 bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               {t.hero.name}
