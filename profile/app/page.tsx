@@ -233,7 +233,7 @@ export default function Page() {
                 animate={{ opacity: 1, x: 0 }}
                 className="text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
               >
-                Mạnh Dev
+                Đỗ Mạnh
               </motion.h1>
               <div className="hidden md:flex space-x-8">
                 {sections.map((section) => (
