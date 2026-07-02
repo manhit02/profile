@@ -207,6 +207,13 @@ export default function Page() {
   const [activeSection, setActiveSection] = useState("hero");
   const [language, setLanguage] = useState<"vi" | "en">("vi");
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyCvLink = () => {
+    navigator.clipboard.writeText("https://profile-zywt.vercel.app/cv/cv.pdf");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const t = translations[language];
 
@@ -282,7 +289,7 @@ export default function Page() {
                   </button>
                 ))}
                 <a
-                  href="/cv.pdf"
+                  href="/cv/cv.pdf"
                   download
                   className="px-4 py-2 rounded-lg transition-all duration-300 text-center text-white bg-linear-to-r from-blue-500 to-purple-600 hover:shadow-lg font-medium cursor-pointer"
                 >
