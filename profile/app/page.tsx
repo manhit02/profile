@@ -281,6 +281,13 @@ export default function Page() {
                     {t.sections[section.labelKey as keyof typeof t.sections]}
                   </button>
                 ))}
+                <a
+                  href="/cv.pdf"
+                  download
+                  className="px-4 py-2 rounded-lg transition-all duration-300 text-center text-white bg-linear-to-r from-blue-500 to-purple-600 hover:shadow-lg font-medium cursor-pointer"
+                >
+                  {language === "vi" ? "Tải CV" : "Download CV"}
+                </a>
                 <button
                   onClick={() => setLanguage(language === "vi" ? "en" : "vi")}
                   className="px-4 py-2 rounded-lg transition-all duration-300 min-w-[60px]  text-center text-gray-600 hover:text-blue-600 hover:bg-blue-50 font-medium border border-gray-200 cursor-pointer"
